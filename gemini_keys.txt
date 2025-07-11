@@ -1,0 +1,13 @@
+# Пример файла с API ключами Gemini
+# Замените эти примеры на реальные ключи API
+# Каждый ключ должен быть на отдельной строке
+# Всего должно быть 120 ключей
+
+AIzaSyDhKqOCMQVjm6KAFKIf2r9RCOzVbvUSWRM
+AIzaSyDhKqOCMQVjm6KAFKIf2r9RCOzVbvUSWR2
+AIzaSyDhKqOCMQVjm6KAFKIf2r9RCOzVbvUSWR3
+AIzaSyDhKqOCMQVjm6KAFKIf2r9RCOzVbvUSWR4
+AIzaSyDhKqOCMQVjm6KAFKIf2r9RCOzVbvUSWR5
+
+# Добавьте остальные 115 ключей здесь...
+# Формат: AIzaSy[28 символов]
