@@ -1,0 +1,28 @@
+# LiteLLM v1.70.0 с поддержкой прокси
+litellm[proxy]==1.70.0
+
+# Базовые зависимости для PostgreSQL
+psycopg2-binary==2.9.9
+
+# Prisma для работы с базой данных
+prisma==0.11.0
+
+# Redis для кеширования
+redis==5.0.1
+
+# Дополнительные зависимости для стабильной работы
+pydantic==2.5.3
+fastapi==0.104.1
+uvicorn==0.24.0
+python-multipart==0.0.6
+python-dotenv==1.0.0
+
+# Зависимости для безопасности
+cryptography==41.0.7
+PyJWT==2.8.0
+
+# Зависимости для мониторинга
+prometheus-client==0.19.0
+
+# Зависимости для логирования
+structlog==23.2.0
