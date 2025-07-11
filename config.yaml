@@ -1,0 +1,32 @@
+# Файл конфигурации LiteLLM v1.70.0
+
+general_settings:
+  # Мастер-ключ для аутентификации на прокси. Значение берется из переменной окружения.
+  master_key: "os.environ/LITELLM_MASTER_KEY"
+  # URL для подключения к базе данных PostgreSQL. Значение берется из переменной окружения.
+  database_url: "os.environ/DATABASE_URL"
+  # Включает хранение моделей в базе данных. Это ключевая настройка для данного развертывания.
+  store_model_in_db: True
+
+litellm_settings:
+  # Конфигурация кэша Redis - используем REDIS_URL для полного подключения
+  cache:
+    # Тип кэша
+    type: "redis"
+    # URL Redis - полное подключение с SSL
+    url: "os.environ/REDIS_URL"
+  # Явно отключаем резервные модели по умолчанию, чтобы избежать нежелательного поведения.
+  default_fallbacks: []
+  # Отключаем fallbacks для контекстного окна
+  context_window_fallbacks: []
+
+router_settings:
+  # Этот раздел намеренно оставлен минимальным.
+  # Мы не определяем 'fallbacks' или 'context_window_fallbacks',
+  # чтобы гарантировать отсутствие переопределений маршрутизации.
+  # 'simple-shuffle' - простая стратегия балансировки нагрузки между доступными развертываниями одной модели.
+  routing_strategy: "simple-shuffle"
+
+# Список моделей намеренно оставлен пустым.
+# При 'store_model_in_db: True' LiteLLM будет загружать модели из базы данных.
+model_list: []
